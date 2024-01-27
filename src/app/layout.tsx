@@ -2,8 +2,6 @@ import { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
 import "../styles/base.scss";
 
-// ==========================// Components // ==========================//
-
 const roboto_mono = Roboto_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

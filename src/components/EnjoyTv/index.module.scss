@@ -1,0 +1,39 @@
+.underLine {
+    border-bottom: 8px solid #232323;
+}
+
+.enjoyTv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 72px 0;
+    .tvText {
+        h1 {
+            font-size: 48px;
+            font-weight: 900;
+            padding-bottom: 10px;
+        }
+        p {
+            max-width: 780px;
+            font-size: 24px;
+            font-weight: 400;
+        }
+    }
+    .tvVideo {
+        display: flex;
+        .tvItems {
+            width: 640px;
+            height: 480px;
+            position: relative;
+            img {
+                z-index: 22;
+                position: absolute;
+            }
+            video {
+                position: absolute;
+                top: 100px;
+                left: 80px;
+            }
+        }
+    }
+}

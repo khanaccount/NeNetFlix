@@ -1,0 +1,23 @@
+.underLine {
+    border-bottom: 8px solid #232323;
+}
+
+.childProfile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 72px 0;
+    .tvText {
+        h1 {
+            font-size: 48px;
+            font-weight: 900;
+            padding-bottom: 10px;
+            max-width: 650px;
+        }
+        p {
+            max-width: 780px;
+            font-size: 24px;
+            font-weight: 400;
+        }
+    }
+}

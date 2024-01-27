@@ -1,24 +1,13 @@
 "use client";
 
-import { Formik, Field, ErrorMessage, Form, validateYupSchema } from "formik";
-import * as Yup from "yup";
 import Image from "next/image";
 import s from "./index.module.scss";
-
-const validationSchema = Yup.object().shape({
-    email: Yup.string().email("Неверный формат электронной почты"),
-});
+import Link from "next/link";
+import ArrowRight from "../../../public/assets/header/arrowRight.svg";
+import ArrowRightBlue from "../../../public/assets/header/arrowRightBlue.svg";
+import SubscribeForm from "../SubscribeForm";
 
 export function Header() {
-    const handleSubmit = (values: any, { setSubmitting }: any) => {
-        if (!values.email) {
-            alert("Введите Email");
-        } else {
-            alert(`${values.email} ваш запрос успешно отправлен`);
-        }
-        setSubmitting(false);
-    };
-
     return (
         <header className={s.header}>
             <div className="container">
@@ -35,9 +24,9 @@ export function Header() {
                         <button>
                             Войти
                             <Image
-                                src={"img/header/signIn.svg"}
+                                src={ArrowRight}
                                 alt="signInImg"
-                                width={25}
+                                width={20}
                                 height={25}
                             />
                         </button>
@@ -53,45 +42,33 @@ export function Header() {
                         Готовы к просмотру? Введите свой адрес электронной
                         почты, чтобы создать или возобновить свою подписку.
                     </p>
-                    <Formik
-                        initialValues={{ email: "" }}
-                        validationSchema={validationSchema}
-                        onSubmit={handleSubmit}
-                    >
-                        <Form>
-                            <div className={s.inputContainer}>
-                                <Field
-                                    type="text"
-                                    name="email"
-                                    placeholder="Ваша почта"
-                                    className={s.input}
-                                />
-                                <button className={s.submitEmail} type="submit">
-                                    Начать
-                                    <Image
-                                        src={"img/header/arrowRight.svg"}
-                                        alt="arrowRight"
-                                        width={17}
-                                        height={17}
-                                    />
-                                </button>
-                            </div>
-                            <ErrorMessage
-                                name="email"
-                                render={(msg) => (
-                                    <div className={s.errorMessage}>
-                                        <Image
-                                            src={"img/header/error.svg"}
-                                            alt="arrowRight"
-                                            width={20}
-                                            height={20}
-                                        />
-                                        <p className={s.errorText}>{msg}</p>
-                                    </div>
-                                )}
+                    <SubscribeForm />
+                </div>
+                <div className={s.advertising}>
+                    <Image
+                        src={"/img/header/popcorn.png"}
+                        alt="popcorn"
+                        width={100}
+                        height={100}
+                    />
+                    <div className={s.advertisingText}>
+                        <h1 className={s.advertisingTitle}>
+                            NeNetflix, который вам нравится, всего за 550 руб.
+                        </h1>
+                        <h1 className={s.advertisingSmallText}>
+                            Получите план 'Стандарт с рекламой'.
+                        </h1>
+                        <Link className={s.linkLearnMore} href={"/"}>
+                            Узнать больше
+                            <Image
+                                className={s.popcornSvg}
+                                src={ArrowRightBlue}
+                                alt="arrowRight"
+                                width={17}
+                                height={17}
                             />
-                        </Form>
-                    </Formik>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </header>

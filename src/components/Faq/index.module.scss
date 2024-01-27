@@ -1,0 +1,95 @@
+.underLine {
+    border-bottom: 8px solid #232323;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.faq {
+    padding: 72px 0;
+
+    .title {
+        text-align: center;
+        font-size: 48px;
+        font-weight: 900;
+        margin-bottom: 10px;
+    }
+
+    .item {
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &.active {
+            .bottom {
+                max-height: 1200px;
+                opacity: 1;
+                transition: max-height 0.5s cubic-bezier(0.9, 0, 0.51, 1),
+                    opacity 0.5s ease-in-out;
+            }
+        }
+
+        .top {
+            background-color: rgb(45, 45, 45);
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px;
+            cursor: pointer;
+
+            p {
+                font-size: 25px;
+            }
+
+            .cross {
+                transform: rotate(-45deg);
+            }
+
+            .crossActive {
+                transform: rotate(90deg);
+            }
+        }
+        .textTop {
+            padding: 24px 24px 24px 24px;
+        }
+        .textBottom {
+            padding: 0 24px 24px 24px;
+        }
+
+        .bottom {
+            margin-top: 1px;
+            background-color: rgb(45, 45, 45);
+            max-height: 0;
+            width: 80%;
+            overflow: hidden;
+            transition: max-height 0.5s ease, opacity 0.5s ease-in-out;
+
+            .textTop,
+            .textBottom {
+                font-size: 25px;
+            }
+            &.visible {
+                max-height: 1200px;
+                opacity: 1;
+            }
+        }
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        .formTitle {
+            margin-bottom: 25px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+    }
+}

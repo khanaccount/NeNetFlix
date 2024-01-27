@@ -2,14 +2,13 @@
 
 .header {
     min-height: 100vh;
-
     background: linear-gradient(
             to top,
             rgba(0, 0, 0, 0.8) 0,
             rgba(0, 0, 0, 0) 60%,
             rgba(0, 0, 0, 0.8) 100%
         ),
-        url("/img/header/headerBg.jpg") center/cover no-repeat;
+        url("/assets/header/headerBg.jpg") center/cover no-repeat;
 }
 
 .nav {
@@ -86,64 +85,54 @@
         font-size: 20px;
         line-height: 1.5;
     }
+}
 
-    .inputContainer {
+.advertising {
+    position: absolute;
+    z-index: 33;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    padding: 22px;
+    width: 95%;
+
+    background: radial-gradient(
+        51.39% 511.66% at 47.68% -217.91%,
+        #ff9900 0%,
+        #e50914 17.27%,
+        #0e1b4f 79.44%,
+        #000413 100%
+    );
+    box-shadow: 0px -8px 25px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    .advertisingText {
+        margin-left: 10px;
         display: flex;
-        .input {
-            position: relative;
-            background: transparent;
-            border: 1px solid transparent;
-            width: 350px;
-            color: inherit;
-            padding-left: 15px;
-            border-radius: 4px;
-            font-size: 16px;
-
-            background: rgba(22, 22, 22, 0.7);
-        }
-        .inputGreen {
-            border: 1px solid greenyellow;
-        }
-        .submitEmail {
-            margin-left: 8px;
-            display: inline-flex;
-            align-items: center;
-            border-radius: 5px;
-            background-color: red;
-
-            cursor: pointer;
-
-            color: $text-color-white;
-            font-size: 26px;
-            padding: 12px 25px;
-
-            img {
-                margin-left: 10px;
-            }
-
-            &:hover {
-                background-color: darken(red, 10%);
-            }
-
-            &:active {
-                background-color: darken(red, 20%);
-            }
-        }
+        flex-direction: column;
+        align-items: start;
+    }
+    .advertisingTitle {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
     }
 
-    .errorMessage {
-        color: red;
+    .advertisingSmallText {
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 4px;
+        margin-bottom: 8px;
+    }
+    .linkLearnMore {
+        cursor: pointer;
         display: flex;
         align-items: center;
-        margin-top: 5px;
+        justify-content: center;
+        color: #448ef4;
+        font-weight: 500;
     }
-    .errorText {
-        padding-left: 5px;
-        margin: 0;
-        font-size: 16px;
-        font-weight: 300;
-    }
-    .validInput {
-        border: 2px solid green;
+    .popcornSvg {
     }
 }

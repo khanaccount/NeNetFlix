@@ -1,0 +1,59 @@
+@import "../../styles/variables.scss";
+
+.inputContainer {
+    display: flex;
+    .input {
+        position: relative;
+        background: transparent;
+        border: 1px solid transparent;
+        width: 350px;
+        color: inherit;
+        padding-left: 15px;
+        border-radius: 4px;
+        font-size: 16px;
+
+        background: rgba(22, 22, 22, 0.7);
+    }
+    .inputGreen {
+        border: 1px solid greenyellow;
+    }
+    .submitEmail {
+        margin-left: 8px;
+        display: inline-flex;
+        align-items: center;
+        border-radius: 5px;
+        background-color: red;
+
+        cursor: pointer;
+
+        color: $text-color-white;
+        font-size: 26px;
+        padding: 12px 25px;
+
+        img {
+            margin-left: 10px;
+        }
+
+        &:hover {
+            background-color: darken(red, 10%);
+        }
+
+        &:active {
+            background-color: darken(red, 20%);
+        }
+    }
+}
+
+.errorMessage {
+    height: 30px;
+    color: red;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+.errorText {
+    padding-left: 5px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 300;
+}

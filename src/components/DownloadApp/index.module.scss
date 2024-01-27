@@ -1,0 +1,98 @@
+.underLine {
+    border-bottom: 8px solid #232323;
+}
+
+.downloadApp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 72px 0;
+    .tvText {
+        h1 {
+            max-width: 700px;
+            font-size: 48px;
+            font-weight: 900;
+            padding-bottom: 10px;
+        }
+        p {
+            max-width: 780px;
+            font-size: 21px;
+            font-weight: 400;
+        }
+    }
+    .phoneBlock {
+        display: flex;
+        position: relative;
+        .phonePoster {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 350px;
+
+            overflow: hidden;
+            left: 22%;
+            bottom: 6%;
+            position: absolute;
+            background-color: black;
+            padding: 8px 12px;
+
+            border: 2px solid rgba(128, 128, 128, 0.7);
+            box-shadow: 0 0 2em 0 rgb(0, 0, 0);
+            border-radius: 0.75rem;
+            z-index: 1;
+        }
+
+        .phoneText {
+            .download {
+                font-size: 14px;
+                color: #0071eb;
+            }
+        }
+
+        .downloadSvg {
+            width: 30px;
+            height: 30px;
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        .animation {
+            width: 30px;
+            height: 30px;
+            opacity: 0;
+            transform: scale(0.5);
+            animation: bounceIn 0.8s ease-out forwards;
+        }
+
+        .mobileCheckSvg {
+            width: 30px;
+            height: 30px;
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
