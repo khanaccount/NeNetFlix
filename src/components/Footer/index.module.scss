@@ -1,0 +1,45 @@
+.footer {
+    border-top: 8px solid rgb(35, 35, 35);
+}
+
+.footerBlock {
+    display: flex;
+    flex-direction: column;
+    padding: 48px;
+}
+
+.footerLinkList {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerColumn {
+    margin-bottom: 20px;
+    padding-top: 10px;
+
+    li {
+        &:not(:last-child) {
+            padding-bottom: 15px;
+        }
+        a {
+            font-size: 13px;
+            margin-bottom: 5px;
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: underline;
+            &:active {
+                color: red;
+            }
+        }
+    }
+}
+
+.phoneCall {
+    font-size: 13px;
+    padding-top: 50px;
+    color: rgba(255, 255, 255, 0.7);
+    a {
+        padding-left: 10px;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+}
