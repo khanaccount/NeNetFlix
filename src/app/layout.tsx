@@ -1,8 +1,11 @@
 import { Metadata } from "next";
-import { Roboto_Mono } from "next/font/google";
 import "../styles/base.scss";
+import localFont from "next/font/local";
 
-const roboto_mono = Roboto_Mono({ subsets: ["latin"] });
+const myFont = localFont({
+    src: "../../public/fonts/NetflixSans_W_Rg.woff2",
+    display: "swap",
+});
 
 export const metadata: Metadata = {
     title: "NeNetFlix",
@@ -16,7 +19,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={roboto_mono.className}>{children}</body>
+            <body className={myFont.className}>{children}</body>
         </html>
     );
 }

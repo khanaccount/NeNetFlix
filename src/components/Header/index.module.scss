@@ -1,7 +1,7 @@
 @import "../../styles/variables.scss";
 
 .header {
-    min-height: 100vh;
+    min-height: 700px;
     background: linear-gradient(
             to top,
             rgba(0, 0, 0, 0.8) 0,
@@ -71,7 +71,7 @@
     align-items: center;
     margin-top: 150px;
     h1 {
-        font-size: 44px;
+        font-size: 48px;
         font-weight: 900;
         text-align: center;
     }
@@ -90,7 +90,7 @@
 .advertising {
     position: absolute;
     z-index: 33;
-    top: 100%;
+    top: 76%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;

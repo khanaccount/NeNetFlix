@@ -1,2 +1,81 @@
 .home {
 }
+
+//=================== NOT FOUND ===================//
+
+.notFoundPage {
+    .logoText {
+        font-size: 40px;
+        color: red;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .bgImg {
+        background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.8) 0,
+                rgba(0, 0, 0, 0) 60%,
+                rgba(0, 0, 0, 0.8) 100%
+            ),
+            url("/assets/not_found/snowrunner.png") center/cover no-repeat;
+        width: 100%;
+        min-height: 826px;
+    }
+
+    .notFoundBody {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 200px;
+        h1 {
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.57);
+            font-size: 96px;
+            font-weight: 500;
+            margin-bottom: 2vw;
+        }
+        .notFoundContent {
+            display: flex;
+            flex-direction: column;
+            p {
+                text-align: center;
+                font-size: 30px;
+                margin-bottom: 20px;
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.57);
+            }
+            button {
+                margin: 0 auto;
+                border-radius: 5px;
+                background-color: rgb(255, 255, 255);
+                max-width: 250px;
+                cursor: pointer;
+                padding: 10px 30px;
+
+                a {
+                    color: black;
+                    font-size: 26px;
+                    text-decoration: none;
+                    font-weight: 500;
+                    line-height: 38px;
+                }
+
+                &:hover {
+                    background-color: darken(rgb(255, 255, 255), 10%);
+                }
+
+                &:active {
+                    background-color: darken(rgb(255, 255, 255), 20%);
+                }
+            }
+            .errorCode {
+                margin: 50px auto;
+                border-left: 2px solid #e50914;
+                font-size: 38px;
+                font-weight: 100;
+                letter-spacing: 1.6px;
+                line-height: 2;
+                padding: 0 10px;
+            }
+        }
+    }
+}
