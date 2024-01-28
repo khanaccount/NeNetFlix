@@ -1,5 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import s from "./index.module.scss";
+
+export const metadata: Metadata = {
+    title: "NotFound",
+};
 
 export default function NotFound() {
     return (

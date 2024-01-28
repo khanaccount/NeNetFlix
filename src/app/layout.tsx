@@ -2,8 +2,16 @@ import { Metadata } from "next";
 import "../styles/base.scss";
 import localFont from "next/font/local";
 
-const myFont = localFont({
+const myFontRegular = localFont({
     src: "../../public/fonts/NetflixSans_W_Rg.woff2",
+    display: "swap",
+});
+const myFontMedium = localFont({
+    src: "../../public/fonts/NetflixSans_W_Md.woff2",
+    display: "swap",
+});
+const myFontBold = localFont({
+    src: "../../public/fonts/NetflixSans_W_Blk.woff2",
     display: "swap",
 });
 
@@ -19,7 +27,11 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={myFont.className}>{children}</body>
+            <body
+                className={`${myFontRegular.className} ${myFontMedium.className} ${myFontBold.className}`}
+            >
+                {children}
+            </body>
         </html>
     );
 }
