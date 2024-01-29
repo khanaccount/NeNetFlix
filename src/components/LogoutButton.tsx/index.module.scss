@@ -1,0 +1,25 @@
+.signOut {
+    display: inline-flex;
+    align-items: flex-end;
+    border-radius: 5px;
+    background-color: red;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    color: white;
+    font-size: 20px;
+    padding: 5px 15px;
+
+    img {
+        margin-left: 10px;
+    }
+
+    &:hover {
+        background-color: darken(red, 10%);
+    }
+
+    &:active {
+        background-color: darken(red, 20%);
+    }
+}

@@ -1,13 +1,16 @@
-"use client";
-
 import Image from "next/image";
 import s from "./index.module.scss";
 import Link from "next/link";
 import ArrowRight from "../../../public/assets/header/arrowRight.svg";
 import ArrowRightBlue from "../../../public/assets/header/arrowRightBlue.svg";
 import SubscribeForm from "../SubscribeForm";
+import { LogoutButton } from "../LogoutButton.tsx";
 
-export function Header() {
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/utils/auth";
+
+export default async function Header() {
+    const session = await getServerSession(authOptions);
     return (
         <header className={s.header}>
             <div className="container">
@@ -21,15 +24,19 @@ export function Header() {
                     </ul>
 
                     <div className={s.signIn}>
-                        <button>
-                            Войти
-                            <Image
-                                src={ArrowRight}
-                                alt="signInImg"
-                                width={20}
-                                height={25}
-                            />
-                        </button>
+                        {session ? (
+                            <LogoutButton />
+                        ) : (
+                            <Link href={"/login"}>
+                                Войти
+                                <Image
+                                    src={ArrowRight}
+                                    alt="signOutImg"
+                                    width={20}
+                                    height={25}
+                                />
+                            </Link>
+                        )}
                     </div>
                 </nav>
                 <div className={s.content}>

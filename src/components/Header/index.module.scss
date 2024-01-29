@@ -38,11 +38,13 @@
     }
 
     .signIn {
+        a,
         button {
             display: inline-flex;
             align-items: flex-end;
             border-radius: 5px;
             background-color: red;
+            text-decoration: none;
 
             cursor: pointer;
 
@@ -132,7 +134,5 @@
         justify-content: center;
         color: #448ef4;
         font-weight: 500;
-    }
-    .popcornSvg {
     }
 }
