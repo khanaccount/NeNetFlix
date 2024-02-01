@@ -17,7 +17,7 @@ export function EnjoyTv() {
                     </div>
                     <div className={s.tvVideo}>
                         <div className={s.tvItems}>
-                            <Image width={640} height={480} src={tv} alt="tv" />
+                            <Image src={tv} alt="tv" />
                             <video autoPlay playsInline muted loop>
                                 <source
                                     src="/assets/enjoy_tv/video_tv.m4v"

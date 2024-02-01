@@ -9,7 +9,7 @@ export function WatchEverywhere() {
                 <div className={s.watchEverywhere}>
                     <div className={s.tvVideo}>
                         <div className={s.tvItems}>
-                            <Image width={580} height={435} src={tv} alt="tv" />
+                            <Image src={tv} alt="tv" />
                             <video autoPlay playsInline muted loop>
                                 <source
                                     src="/assets/watch_everewhere/video_watch.m4v"

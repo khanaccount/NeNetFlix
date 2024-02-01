@@ -16,12 +16,7 @@ export function ChildProfile() {
                         </p>
                     </div>
                     <div className={s.tvImg}>
-                        <Image
-                            width={580}
-                            height={435}
-                            src={childImg}
-                            alt="child img"
-                        />
+                        <Image src={childImg} alt="child img" />
                     </div>
                 </div>
             </div>

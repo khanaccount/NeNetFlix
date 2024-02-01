@@ -31,15 +31,13 @@ export function DownloadApp() {
                 <div className={s.downloadApp}>
                     <div className={s.phoneBlock}>
                         <Image
-                            width={640}
-                            height={480}
+                            className={s.mobileBg}
                             src={mobileBg}
                             alt="mobile"
                         />
                         <div className={s.phonePoster}>
                             <Image
-                                width={57}
-                                height={80}
+                                className={s.posterImg}
                                 src={poster}
                                 alt="poster"
                             />

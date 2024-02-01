@@ -39,3 +39,26 @@
         color: rgba(255, 255, 255, 0.7);
     }
 }
+
+@media (width: 768px) {
+    .footerColumn {
+        margin-bottom: 20px;
+        padding-top: 10px;
+        padding-right: 60px;
+
+        li {
+            &:not(:last-child) {
+                padding-bottom: 15px;
+            }
+            a {
+                font-size: 13px;
+                margin-bottom: 5px;
+                color: rgba(255, 255, 255, 0.7);
+                text-decoration: underline;
+                &:active {
+                    color: red;
+                }
+            }
+        }
+    }
+}

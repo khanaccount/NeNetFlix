@@ -22,21 +22,6 @@
         color: red;
     }
 
-    .menuList {
-        display: flex;
-        li {
-            font-size: 25px;
-
-            cursor: pointer;
-            &:active {
-                color: red;
-            }
-            &:not(:last-child) {
-                padding-right: 90px;
-            }
-        }
-    }
-
     .signIn {
         a,
         button {
@@ -134,5 +119,29 @@
         justify-content: center;
         color: #448ef4;
         font-weight: 500;
+    }
+}
+
+@media (width: 2560px) {
+    .advertising {
+        top: 59%;
+    }
+}
+
+@media (width: 1440px) {
+    .advertising {
+        top: 85%;
+    }
+}
+
+@media (width: 1024px) {
+    .advertising {
+        top: 85%;
+    }
+}
+
+@media (width: 768px) {
+    .advertising {
+        top: 90%;
     }
 }

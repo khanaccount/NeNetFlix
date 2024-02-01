@@ -15,7 +15,11 @@ export default function Login() {
             <div className={s.authForm}>
                 <h1 className={s.signIn}>Войти</h1>
 
-                <form className={s.inputContainer}>
+                <form
+                    method="post"
+                    action="/api/auth/signin"
+                    className={s.inputContainer}
+                >
                     <input
                         type="text"
                         name="email"

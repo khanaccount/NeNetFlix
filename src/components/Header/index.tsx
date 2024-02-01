@@ -4,10 +4,11 @@ import Link from "next/link";
 import ArrowRight from "../../../public/assets/header/arrowRight.svg";
 import ArrowRightBlue from "../../../public/assets/header/arrowRightBlue.svg";
 import SubscribeForm from "../SubscribeForm";
-import { LogoutButton } from "../LogoutButton.tsx";
+import PopCorn from "../../../public/assets/header/popcorn.png";
 
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/utils/auth";
+import { NavUser } from "../NavUser";
 
 export default async function Header() {
     const session = await getServerSession(authOptions);
@@ -17,15 +18,9 @@ export default async function Header() {
                 <nav className={s.nav}>
                     <h1 className={s.logoText}>NeNetFlix</h1>
 
-                    <ul className={s.menuList}>
-                        <li>О нас</li>
-                        <li>Афиша</li>
-                        <li>Где нас найти?</li>
-                    </ul>
-
                     <div className={s.signIn}>
                         {session ? (
-                            <LogoutButton />
+                            <NavUser />
                         ) : (
                             <Link href={"/login"}>
                                 Войти
@@ -53,7 +48,7 @@ export default async function Header() {
                 </div>
                 <div className={s.advertising}>
                     <Image
-                        src={"/img/header/popcorn.png"}
+                        src={PopCorn}
                         alt="popcorn"
                         width={100}
                         height={100}

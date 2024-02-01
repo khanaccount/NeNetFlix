@@ -1,25 +1,13 @@
-import s from "./index.module.scss";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/utils/auth";
+import { redirect } from "next/navigation";
 
-import Header from "@/components/Header";
-import { EnjoyTv } from "@/components/EnjoyTv";
-import { WatchEverywhere } from "@/components/WatchEverywhere";
-import { ChildProfile } from "@/components/ChildProfile";
-import { DownloadApp } from "@/components/DownloadApp";
-import { Faq } from "@/components/Faq";
-import { Footer } from "@/components/Footer";
+export default async function Home() {
+    const session = await getServerSession(authOptions);
 
-export default function Home() {
-    return (
-        <main className={s.home}>
-            <Header />
-
-            <EnjoyTv />
-            <WatchEverywhere />
-            <ChildProfile />
-            <DownloadApp />
-            <Faq />
-
-            <Footer />
-        </main>
-    );
+    if (!session) {
+        return redirect("/login");
+    } else {
+        return redirect("/home");
+    }
 }

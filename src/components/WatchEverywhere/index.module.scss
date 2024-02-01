@@ -26,6 +26,8 @@
             height: 480px;
             position: relative;
             img {
+                width: 580px;
+                height: 435px;
                 z-index: 22;
                 position: absolute;
             }
@@ -36,6 +38,49 @@
                 top: 42px;
                 left: 103px;
                 overflow: hidden;
+            }
+        }
+    }
+}
+
+@media (width: 768px) {
+    .watchEverywhere {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 72px 0;
+        .tvText {
+            h1 {
+                font-size: 48px;
+                font-weight: 900;
+                padding-bottom: 10px;
+            }
+            p {
+                max-width: 780px;
+                font-size: 22px;
+                font-weight: 400;
+            }
+        }
+        .tvVideo {
+            display: flex;
+            .tvItems {
+                width: 475px;
+                height: 310px;
+                position: relative;
+                img {
+                    width: 479px;
+                    height: 341px;
+                    z-index: 22;
+                    position: absolute;
+                }
+                video {
+                    width: 308px;
+                    height: 165px;
+                    position: absolute;
+                    top: 38px;
+                    left: 84px;
+                    overflow: hidden;
+                }
             }
         }
     }
